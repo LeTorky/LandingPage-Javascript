@@ -69,7 +69,9 @@ document.addEventListener('scroll',function(){
      ContentHighlighted[index2].style.backgroundColor ='black';
 });
 
-NavPath.addEventListener('mouseover',function(){
+const EventsArray = ['mouseover','click'];
+for (let i of EventsArray){
+    NavPath.addEventListener(i,function(){
     // NavBar Movement
    if (NavBar.style.left === '-195px'){
        var NavRight = setInterval(function(){NavMove(NavBar.style.left)},0.8);
@@ -87,7 +89,9 @@ NavPath.addEventListener('mouseover',function(){
        },3000);
 
    }
-})
+});
+}
+
 
 // Scrolling to content
 
