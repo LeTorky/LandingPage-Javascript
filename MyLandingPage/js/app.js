@@ -8,44 +8,44 @@ window.scroll(0,1);
 // Animation for Nav Bar and Nav Content Highlight
 
 // A Function to create the offset of the Nav Bar
-NavMove = function (Pixels){
-    if (NavBar.style.left !== '-30px')
-    {
-        Pixels = Pixels.replace('px','');
-        Pixels = parseInt(Pixels);
-        Pixels += 1;
-        NavBar.style.left = String(Pixels)+'px';
-    }
-}
-// A Function to return the Nav Bar to Original Position
-NavReturn = function (Pixels){
-    if (NavBar.style.left !== '-195px')
-    {
-        Pixels = Pixels.replace('px','');
-        Pixels = parseInt(Pixels);
-        Pixels -= 1;
-        NavBar.style.left = String(Pixels)+'px';
-    }
-}
+// NavMove = function (Pixels){
+//     if (NavBar.style.left !== '-30px')
+//     {
+//         Pixels = Pixels.replace('px','');
+//         Pixels = parseInt(Pixels);
+//         Pixels += 1;
+//         NavBar.style.left = String(Pixels)+'px';
+//     }
+// }
+// // A Function to return the Nav Bar to Original Position
+// NavReturn = function (Pixels){
+//     if (NavBar.style.left !== '-195px')
+//     {
+//         Pixels = Pixels.replace('px','');
+//         Pixels = parseInt(Pixels);
+//         Pixels -= 1;
+//         NavBar.style.left = String(Pixels)+'px';
+//     }
+// }
 // Even listener to invoke NavBar Offsetting and highlighting of content
 document.addEventListener('scroll',function(){
     // NavBar Movement
-   if (NavBar.style.left === '-195px'){
-       var NavRight = setInterval(function(){NavMove(NavBar.style.left)},0.8);
-       var Toggler = setTimeout(function(){
-           clearInterval(NavRight);
-           clearTimeout(Toggler);
-       },3000);
-       var Toggler2 = setTimeout(function(){
-           var NavLeft = setInterval(function(){NavReturn(NavBar.style.left)},0.8);
-           var Toggler3 = setTimeout(function(){
-           clearInterval(NavLeft);
-           clearTimeout(Toggler2);
-           clearTimeout(Toggler3);
-       },1000);
-       },3000);
-
-   }
+   // if (NavBar.style.left === '-195px'){
+   //     var NavRight = setInterval(function(){NavMove(NavBar.style.left)},0.8);
+   //     var Toggler = setTimeout(function(){
+   //         clearInterval(NavRight);
+   //         clearTimeout(Toggler);
+   //     },3000);
+   //     var Toggler2 = setTimeout(function(){
+   //         var NavLeft = setInterval(function(){NavReturn(NavBar.style.left)},0.8);
+   //         var Toggler3 = setTimeout(function(){
+   //         clearInterval(NavLeft);
+   //         clearTimeout(Toggler2);
+   //         clearTimeout(Toggler3);
+   //     },1000);
+   //     },3000);
+   //
+   // }
    // Content Highlighting
      const ScrolledTo = document.documentElement.scrollTop;
      const InnerContent = document.querySelectorAll('.inner_content');
@@ -69,28 +69,28 @@ document.addEventListener('scroll',function(){
      ContentHighlighted[index2].style.backgroundColor ='black';
 });
 
-const EventsArray = ['mouseover','click'];
-for (let i of EventsArray){
-    NavPath.addEventListener(i,function(){
-    // NavBar Movement
-   if (NavBar.style.left === '-195px'){
-       var NavRight = setInterval(function(){NavMove(NavBar.style.left)},0.8);
-       var Toggler = setTimeout(function(){
-           clearInterval(NavRight);
-           clearTimeout(Toggler);
-       },3000);
-       var Toggler2 = setTimeout(function(){
-           var NavLeft = setInterval(function(){NavReturn(NavBar.style.left)},0.8);
-           var Toggler3 = setTimeout(function(){
-           clearInterval(NavLeft);
-           clearTimeout(Toggler2);
-           clearTimeout(Toggler3);
-       },1000);
-       },3000);
-
-   }
-});
-}
+// const EventsArray = ['mouseover','click'];
+// for (let i of EventsArray){
+//     NavPath.addEventListener(i,function(){
+//     // NavBar Movement
+//    if (NavBar.style.left === '-195px'){
+//        var NavRight = setInterval(function(){NavMove(NavBar.style.left)},0.8);
+//        var Toggler = setTimeout(function(){
+//            clearInterval(NavRight);
+//            clearTimeout(Toggler);
+//        },3000);
+//        var Toggler2 = setTimeout(function(){
+//            var NavLeft = setInterval(function(){NavReturn(NavBar.style.left)},0.8);
+//            var Toggler3 = setTimeout(function(){
+//            clearInterval(NavLeft);
+//            clearTimeout(Toggler2);
+//            clearTimeout(Toggler3);
+//        },1000);
+//        },3000);
+//
+//    }
+// });
+// }
 
 
 // Scrolling to content
