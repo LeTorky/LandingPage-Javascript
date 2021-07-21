@@ -235,7 +235,7 @@ html{
 /*empty, just used as a flag*/
 }
 
-@media screen and (max-width: 765px)
+@media screen and (max-width: 1086px)
 {
     .nav_pointer{
         height:70%;
